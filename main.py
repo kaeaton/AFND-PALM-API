@@ -39,6 +39,6 @@ async def palm(allele: str):
     # # PALM("DRB1*01:01", variantType="allele", color=F, mask = T, filename=SSHAARP::solberg_dataset, resolution = 480)
 
         print(image)
-        filename = allele.replace(':', '/')
+        filename = allele.replace(':', '/') + '.jpg'
         file = Path(".", filename)
-        return {"image": file}
+        return file
