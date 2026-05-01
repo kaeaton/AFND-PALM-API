@@ -11,5 +11,4 @@ Accept: application/json
 ###
 
 GET http://127.0.0.1:8000/palm?allele=A*01:02
-#Accept: text/plain
-Accept: application/json
+Accept: image/jpeg
