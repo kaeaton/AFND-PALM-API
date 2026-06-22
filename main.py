@@ -2,8 +2,12 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 import subprocess
 ***REMOVED***
+***REMOVED***
+***REMOVED***
 import rpy2.robjects as ro
 from rpy2.robjects.packages import importr
+***REMOVED***
+***REMOVED***
 app = FastAPI(***REMOVED***
 
 
@@ -18,6 +22,22 @@ async def say_hello(name: str***REMOVED***:
 
 @app.get("/palm"***REMOVED***
 async def palm(allele: str***REMOVED***:
+
+    ***REMOVED***
+    ***REMOVED***
+    ***REMOVED***
+
+    ***REMOVED***
+        "mssql+mssql-python",
+    ***REMOVED***
+    ***REMOVED***
+    ***REMOVED***
+    ***REMOVED***
+    ***REMOVED***
+        query={"driver": "ODBC Driver 18 for SQL Server"}
+    ***REMOVED***
+
+    engine = create_engine(connection_url***REMOVED***
 
     # Allows rpy2 to find its config settings even in a thread
     with ro.default_converter.context(***REMOVED***:
