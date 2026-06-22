@@ -6,4 +6,6 @@ R_pkgs/
 .DS_Store
 __pycache__/
 .venv/
-AFND.code_workspace
+AFND.code-workspace
+.env
+
