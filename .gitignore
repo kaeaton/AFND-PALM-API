@@ -1,5 +1,4 @@
 .idea/
-*.jpg
 .RData
 .Rhistory
 R_pkgs/
