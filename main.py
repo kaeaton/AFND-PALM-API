@@ -8,6 +8,10 @@ import rpy2.robjects as ro
 from rpy2.robjects.packages import importr
 ***REMOVED***
 ***REMOVED***
+***REMOVED***
+
+
+
 app = FastAPI(***REMOVED***
 
 
@@ -28,23 +32,30 @@ async def palm(allele: str***REMOVED***:
     ***REMOVED***
 
     ***REMOVED***
-        "mssql+mssql-python",
     ***REMOVED***
     ***REMOVED***
     ***REMOVED***
     ***REMOVED***
     ***REMOVED***
-        query={"driver": "ODBC Driver 18 for SQL Server"}
+    ***REMOVED***
+    ***REMOVED***
     ***REMOVED***
 
     engine = create_engine(connection_url***REMOVED***
+
+    # Check image_list.tsv
+    image_list = Path("./image_list.tsv"***REMOVED***
+
+
 
     # Allows rpy2 to find its config settings even in a thread
     with ro.default_converter.context(***REMOVED***:
 
         # Load SSHAARP and the Solberg dataset
         sshaarp = importr('SSHAARP'***REMOVED***
+        print("imported sshaarp"***REMOVED***
         solberg_dataset = ro.r("SSHAARP::solberg_dataset"***REMOVED***
+        print("found the solberg dataset"***REMOVED***
 
         # Generate the image
         sshaarp.PALM(allele, variantType="allele", filename=solberg_dataset, resolution = 500***REMOVED***
